@@ -1,17 +1,51 @@
+const species = 'https://pokeapi.co/api/v2/pokemon-species/';
+// const image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
-export const fetchPokemon = (startGEN, endGEN) => {
-
-    const getPokemonUrl = id => `https://pokeapi.glitch.me/v1/pokemon/${id}`;
-    const pokemonPromises = [];
-
-    for (let i = startGEN; i < endGEN; i++) {
-        pokemonPromises.push(
-            fetch(getPokemonUrl(i)).then(response => response.json())
-        );
+const searchPokemonList = async (dexStart, dexEnd) => {
+    const prom = []
+    for (let i = dexStart; i <= dexEnd; i++) {
+        prom.push(fetch(species + i).then(response => response.json()));
     }
 
-    Promise.all(pokemonPromises).then(pokemons => {
-        console.log(pokemons)
-    });
+    Promise.all(prom).then(pkm => {console.log(pkm)});
+    
+}
 
+export const api = {
+    getPokemonList: async () => {
+        return [
+            {
+                region: 'kanto',
+                pokemons: searchPokemonList(1, 7)
+            },
+            {
+                region: 'johto',
+                pokemons: []
+            },
+            {
+                region: 'hoenn',
+                pokemons: []
+            },
+            {
+                region: 'sinnoh',
+                pokemons: []
+            },
+            {
+                region: 'unova',
+                pokemons: []
+            },
+            {
+                region: 'kalos',
+                pokemons: []
+            },
+            {
+                region: 'alola',
+                pokemons: []
+            },
+            {
+                region: 'galar',
+                pokemons: []
+            },
+        ];
+    }
 }
