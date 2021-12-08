@@ -1,0 +1,115 @@
+.home-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  background: url("../../assets/mancha.svg") no-repeat right;
+  background-size: 65%;
+}
+
+.home-container .first-side {
+  width: 50%;
+  min-width: 500px;
+}
+
+.home-container .first-side .logo {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.home-container .first-side main {
+  color: white;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.home-container .first-side main h1 {
+  font-size: 3.4em;
+  line-height: 1.3em;
+  margin-bottom: 50px;
+  font-weight: 700;
+
+  background: linear-gradient(to right, var(--light-green), var(--light-blue));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-container .first-side main p {
+  font-size: 1.3rem;
+  margin-bottom: 70px;
+  color: var(--gray);
+}
+
+.home-container .first-side main button {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-block: 5px;
+  line-height: 4rem;
+  border-radius: 15px;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--dark-blue);
+  background-image: linear-gradient(
+    to right,
+    var(--light-green),
+    var(--light-blue)
+  );
+}
+
+.home-container .first-side main button img {
+  position: absolute;
+  right: 5%;
+  transition: transform 0.6s;
+}
+
+.home-container .first-side main button:hover {
+  box-shadow: 10px 10px 5px #00000048;
+}
+
+.home-container .first-side main button:hover img {
+  transform: rotate(180deg);
+}
+
+.home-container .first-side main .links {
+  margin-top: 40px;
+  padding-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container .first-side main .links a {
+  color: var(--gray);
+}
+
+.home-container .first-side main .links a:hover {
+  color: var(--light-green);
+}
+
+.home-container .second-side {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container .second-side img {
+  width: 80%;
+}
+
+@media (max-width: 800px) {
+  .home-container {
+    flex-wrap: wrap;
+  }
+
+  .home-container .second-side {
+    visibility: hidden;
+  }
+
+  .home-container .first-side {
+    width: 100vw;
+  }
+}
