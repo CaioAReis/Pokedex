@@ -1,11 +1,11 @@
 import React from 'react';
-import { Home } from './pages/home'
+import { Router } from './routes';
 
 import './global.css';
 
 function App() {
   return (
-    <Home />
+    <Router />
   );
 }
 

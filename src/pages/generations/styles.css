@@ -1,0 +1,71 @@
+.gen-container {
+  background-color: var(--black);
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+}
+
+.gen-container > section {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.gen-container > section a {
+  color: var(--gray);
+  transition: transform 0.2s;
+}
+
+.gen-container > section a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.gen-container ul {
+  list-style: none;
+  max-width: 1200px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  background-color: var(--black);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gen-container ul a {
+  background-color: var(--dark-blue);
+  min-width: 250px;
+  height: 200px;
+  margin: 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.gen-container ul a:hover {
+  transform: scale(1.1);
+  border: 4px solid var(--light-green);
+}
+
+.gen-container ul a li {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/mancha.svg") no-repeat center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gen-container ul a li h2 {
+  color: var(--gray);
+  font-size: 25pt;
+}
+
+@media (max-width: 1200px) {
+  .gen-container {
+    height: max-content;
+  }
+}

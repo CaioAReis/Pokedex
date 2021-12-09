@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/logo.svg';
 import PokeBall from '../../assets/pokeball.svg';
@@ -21,10 +22,10 @@ export const Home = () => {
                         elit. At error eveniet qua! 
                     </p>
 
-                    <button>
+                    <Link to="gens">
                         Go to Dex
                         <img src={PokeBall} alt="Pokeball icon" />
-                    </button>
+                    </Link>
 
                     <section className="links">
                         <a 
