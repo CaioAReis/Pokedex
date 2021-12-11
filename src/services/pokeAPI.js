@@ -1,22 +1,30 @@
 const specie = 'https://pokeapi.co/api/v2/pokemon/';
 const image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
-const fetchPokemon = async (id, descID) => {
-    let pokemon = await fetch(`${specie + id}/`)
+const fetchPokemon = async (id) => {
+    try {
+        let pokemon = await fetch(`${specie + id}/`)
         .then(response => response.json());
-    const pokeImage = `${image + id}.png`;
-    return pokemon = {
-        ...pokemon, 
-        image: pokeImage, 
-    };
+        const pokeImage = `${image + id}.png`;
+        return pokemon = {
+            ...pokemon, 
+            image: pokeImage, 
+        };
+    } catch (e) {
+        alert("Ops ocorreu um erro!");
+    }
 }
 
-const searchPokemonList = async (dexStart, dexEnd, descID) => {
-    const list = []
-    for (let i = dexStart; i <= dexEnd; i++) {
-        list.push(await fetchPokemon(i, descID));
+const searchPokemonList = async (dexStart, dexEnd) => {
+    try {
+        const list = []
+        for (let i = dexStart; i <= dexEnd; i++) {
+            list.push(await fetchPokemon(i));
+        }
+        return list;
+    } catch (e) {
+        alert("Ops ocorreu um erro!");
     }
-    return list;
 }
 
 const kantoDex = async () => {
@@ -59,13 +67,13 @@ const galarDex = async () => {
     return await searchPokemonList(810, 819);
 }
 
-export {
-    kantoDex,
-    johtoDex,
-    hoennDex,
-    sinnohDex,
-    unovaDex,
-    kalosDex,
-    alolaDex,
-    galarDex
-};
+export const allDex = [
+    kantoDex(),
+    johtoDex(),
+    hoennDex(),
+    sinnohDex(),
+    unovaDex(),
+    kalosDex(),
+    alolaDex(),
+    galarDex()
+];

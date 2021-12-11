@@ -1,0 +1,70 @@
+/* .list-container {
+} */
+
+.list-container .header {
+  border-bottom: 4px solid;
+  border-image: linear-gradient(
+    to right,
+    var(--light-green),
+    var(--light-blue)
+  );
+  border-image-slice: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-container .header > div {
+  width: 15%;
+}
+
+.list-container .header > div a {
+  color: var(--gray);
+  margin-left: 40px;
+}
+
+.list-container .header > div a:hover {
+  color: #fff;
+}
+
+.list-container .header .input-container {
+  border: 4px solid var(--black);
+  margin-right: 40px;
+  width: 15%;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.list-container .header .input-container input {
+  height: 100%;
+  width: 80%;
+  padding-left: 10px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.list-container .header .input-container input::placeholder {
+  color: var(--gray);
+}
+
+.list-container .header .input-container button {
+  width: 20%;
+  height: 100%;
+  background-color: transparent;
+  color: var(--gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-container .header .input-container button:hover svg {
+  color: #fff;
+  transform: scale(1.3);
+}

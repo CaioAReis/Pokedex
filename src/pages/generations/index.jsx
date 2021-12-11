@@ -23,56 +23,56 @@ export const Generations = () => {
             </section>
             
             <ul>
-                <Link to="#">
+                <Link to="/list/0">
                     <li>
                         <img src={Kanto} alt="Kanto Dex" />
                         <h2>Kanto</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/1">
                     <li>
                         <img src={Johto} alt="Johto Dex" />
                         <h2>Johto</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/2">
                     <li>
                         <img src={Hoenn} alt="Hoenn Dex" />
                         <h2>Hoenn</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/3">
                     <li>
                         <img src={Sinnoh} alt="Sinnoh Dex" />
                         <h2>Sinnoh</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/4">
                     <li>
                         <img src={Unova} alt="Unova Dex" />
                         <h2>Unova</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/5">
                     <li>
                         <img src={Kalos} alt="Kalos Dex" />
                         <h2>Kalos</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/6">
                     <li>
                         <img src={Alola} alt="Alola Dex" />
                         <h2>Alola</h2>
                     </li>
                 </Link>
 
-                <Link to="#">
+                <Link to="/list/7">
                     <li>
                         <img src={Galar} alt="Galar Dex" />
                         <h2>Galar</h2>
