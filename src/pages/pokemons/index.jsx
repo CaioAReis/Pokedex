@@ -4,6 +4,7 @@ import { ArrowLeftCircle, Search } from 'react-feather';
 
 import { allDex } from '../../services/pokeAPI';
 import Logo from '../../assets/logo.svg';
+import { PokemonCard } from '../../components/pokemonCard';
 
 import './styles.css';
 
@@ -55,90 +56,9 @@ export const PokemonList =  () => {
 
             <main className="pokemon-list">
                 <ul>
-                    <Link to="#">
-                        <li>
-                            <div className="image-container">
-                                <img src={Logo} alt="Pokemon Name" />
-                            </div>
-
-                            <div className="content">
-                                <p>#001</p>
-                                <h2>PokemonName</h2>
-                                <div className="types">
-                                    <p>Grass</p>
-                                    <p>Poison</p>
-                                </div>
-                            </div>
-                        </li>
-                    </Link>
-
-                    <Link to="#">
-                        <li>
-                            <div className="image-container">
-                                <img src={Logo} alt="Pokemon Name" />
-                            </div>
-
-                            <div className="content">
-                                <p>#001</p>
-                                <h2>PokemonName</h2>
-                                <div className="types">
-                                    <p>Grass</p>
-                                    <p>Poison</p>
-                                </div>
-                            </div>
-                        </li>
-                    </Link>
-
-                    <Link to="#">
-                        <li>
-                            <div className="image-container">
-                                <img src={Logo} alt="Pokemon Name" />
-                            </div>
-
-                            <div className="content">
-                                <p>#001</p>
-                                <h2>PokemonName</h2>
-                                <div className="types">
-                                    <p>Grass</p>
-                                    <p>Poison</p>
-                                </div>
-                            </div>
-                        </li>
-                    </Link>
-
-                    <Link to="#">
-                        <li>
-                            <div className="image-container">
-                                <img src={Logo} alt="Pokemon Name" />
-                            </div>
-
-                            <div className="content">
-                                <p>#001</p>
-                                <h2>PokemonName</h2>
-                                <div className="types">
-                                    <p>Grass</p>
-                                    <p>Poison</p>
-                                </div>
-                            </div>
-                        </li>
-                    </Link>
-
-                    <Link to="#">
-                        <li>
-                            <div className="image-container">
-                                <img src={Logo} alt="Pokemon Name" />
-                            </div>
-
-                            <div className="content">
-                                <p>#001</p>
-                                <h2>PokemonName</h2>
-                                <div className="types">
-                                    <p>Grass</p>
-                                    <p>Poison</p>
-                                </div>
-                            </div>
-                        </li>
-                    </Link>
+                    {pokemonList.length > 0 && pokemonList.map(pokemon => (
+                        <PokemonCard pokemon={pokemon} />
+                    ))}
                 </ul>
             </main>
 

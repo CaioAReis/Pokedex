@@ -1,0 +1,56 @@
+a.pokemonCard {
+  border-radius: 10px;
+  height: 271px;
+  width: 233px;
+  margin: 15px;
+  text-align: center;
+  color: var(--gray);
+  text-decoration: none;
+  background-color: var(--dark-blue);
+  overflow: hidden;
+  transition: transform 0.2s, border 0.2s;
+}
+
+a.pokemonCard:hover {
+  transform: scale(1.1);
+  border: 4px solid var(--light-green);
+}
+
+a.pokemonCard li .image-container {
+  background: url("../../assets/mancha.svg") no-repeat center;
+  background-size: 80%;
+  margin-bottom: 10px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.pokemonCard li .image-container img {
+  width: 55%;
+}
+
+a.pokemonCard li .content > p {
+  font-size: 14pt;
+  /* padding-block: 5px; */
+}
+
+a.pokemonCard li .content h2 {
+  font-size: 18pt;
+  padding-block: 5px;
+  font-weight: 700;
+}
+
+a.pokemonCard li .content > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a.pokemonCard li .content > div p {
+  border: 1px solid white;
+  background-color: rgb(22, 133, 81);
+  margin-top: 5px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
