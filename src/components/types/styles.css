@@ -1,0 +1,13 @@
+.types-card {
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--black);
+}
+
+.types-card p {
+  border: 2px solid var(--black);
+  margin-top: 5px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}

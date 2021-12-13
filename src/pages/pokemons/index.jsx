@@ -12,6 +12,13 @@ export const PokemonList =  () => {
 
     const { idGen } = useParams();
     const [pokemonList, setPokemonList] = useState([]);
+    const [filteredList, setfilteredList] = useState([]);
+    const [search, setSearch] = useState('');
+
+    const handleSearch = (input) => {
+        setfilteredList(pokemonList
+            .filter(p => p.name.toString().includes(input)));
+    }
 
     useEffect(() => {
         const buscarPKMs = async () => {
@@ -25,18 +32,8 @@ export const PokemonList =  () => {
         buscarPKMs();
     }, [idGen]);
 
-
-    
     return (
         <div className="list-container">
-            {/* {pokemonList.length > 0 && (
-                <div>
-                    <h1>{pokemonList[0].id}</h1>
-                    <h1>{pokemonList[0].name}</h1>
-                    <img src={pokemonList[0].image} alt={pokemonList[0].name}/>
-                </div>
-            )} */}
-
             <header className="header">
                <div>
                     <Link to="/gens">
@@ -47,7 +44,15 @@ export const PokemonList =  () => {
                 <img src={Logo} alt="Pokemon Logo"/>
 
                 <div className="input-container">
-                    <input type="text" placeholder="Pesquisar pokemon" />
+                    <input 
+                        type="text" 
+                        placeholder="Pesquisar pokemon" 
+                        value={search}
+                        onChange={(e) => {
+                            setSearch(e.target.value);
+                            handleSearch(e.target.value);
+                        }}
+                    />
                     <button>
                         <Search size={20} />
                     </button>
@@ -55,11 +60,10 @@ export const PokemonList =  () => {
             </header>
 
             <main className="pokemon-list">
-                <ul>
-                    {pokemonList.length > 0 && pokemonList.map(pokemon => (
-                        <PokemonCard pokemon={pokemon} />
-                    ))}
-                </ul>
+                {search === '' ? 
+                    <PokemonCard pokemonList={pokemonList} /> :
+                    <PokemonCard pokemonList={filteredList} />
+                }
             </main>
 
         </div>
