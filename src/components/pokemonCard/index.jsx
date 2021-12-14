@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Types } from '../types';
+import { Types } from '../Types';
 
 import './styles.css';
 
 export const PokemonCard = ({ pokemonList }) => {
+
     return(
         <ul className="pokemonCard">
-            {pokemonList.length > 0 && pokemonList.map(pokemon => (
-                <Link to="#">
+            {pokemonList !== undefined && pokemonList.map(pokemon => (
+                <Link to="#" key={pokemon.id}>
                     <li>
                         <div className="image-container">
                             <img src={pokemon.sprites.front_default} alt={pokemon.name} />

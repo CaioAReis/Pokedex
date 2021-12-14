@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeftCircle, Search } from 'react-feather';
+import { PkmContext } from '../../context/pkmContext';
 
-import { allDex } from '../../services/pokeAPI';
 import Logo from '../../assets/logo.svg';
-import { PokemonCard } from '../../components/pokemonCard';
+import { PokemonCard } from '../../components/PokemonCard';
 
 import './styles.css';
 
-export const PokemonList =  () => {
+export const PokemonList = () => {
 
-    const { idGen } = useParams();
-    const [pokemonList, setPokemonList] = useState([]);
+    const { pokemonList } =  useContext(PkmContext);
+
     const [filteredList, setfilteredList] = useState([]);
     const [search, setSearch] = useState('');
 
@@ -19,18 +19,6 @@ export const PokemonList =  () => {
         setfilteredList(pokemonList
             .filter(p => p.name.toString().includes(input)));
     }
-
-    useEffect(() => {
-        const buscarPKMs = async () => {
-            try {
-                const pkm = await allDex[idGen];
-                setPokemonList(pkm);
-            } catch (e) {
-                alert("Ops ocoreu um erro!");
-            }
-        }
-        buscarPKMs();
-    }, [idGen]);
 
     return (
         <div className="list-container">

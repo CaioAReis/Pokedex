@@ -29,32 +29,32 @@ const searchPokemonList = async (dexStart, dexEnd) => {
 
 const kantoDex = async () => {
     // 151
-    return await searchPokemonList(1, 151);
+    return await searchPokemonList(1, 9);
 }
 
 const johtoDex = async () => {
     // 251
-    return await searchPokemonList(152, 251);
+    return await searchPokemonList(152, 161);
 }
 
 const hoennDex = async () => {
     // 386
-    return await searchPokemonList(252, 386);
+    return await searchPokemonList(252, 261);
 }
 
 const sinnohDex = async () => {
     // 493
-    return await searchPokemonList(387, 493);
+    return await searchPokemonList(387, 396);
 }
 
 const unovaDex = async () => {
     // 649
-    return await searchPokemonList(494, 649);
+    return await searchPokemonList(494, 513);
 }
 
 const kalosDex = async () => {
     // 721
-    return await searchPokemonList(650, 721);
+    return await searchPokemonList(650, 659);
 }
 
 const alolaDex = async () => {

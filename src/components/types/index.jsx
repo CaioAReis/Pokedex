@@ -6,13 +6,13 @@ import './styles.css';
 export const Types = ({ pokemonTypes }) => {
     return(
         <div className="types-card">
-            {pokemonTypes.map(t => (
-                <p className="type" style={{
+            {pokemonTypes.map((t, i) => (
+                <p key={i} className="type" style={{
                     backgroundColor: types[`${t.type.name}`.toUpperCase()]
                 }}>
                     {`${t.type.name}`.toUpperCase()}
                 </p>
-            ))}   
+            ))}
         </div>
     );
 }
