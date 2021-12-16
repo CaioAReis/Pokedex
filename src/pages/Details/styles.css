@@ -1,0 +1,64 @@
+.details-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.details-container .firstS-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 50%;
+  height: 100vh;
+}
+
+.details-container .firstS-details svg {
+  display: block;
+  margin-top: 40px;
+  margin-left: 40px;
+  color: var(--gray);
+}
+
+.details-container .firstS-details svg:hover {
+  color: white;
+}
+
+.details-container .firstS-details h1 {
+  margin-top: 20px;
+  color: var(--gray);
+  text-align: center;
+  font-size: 4em;
+}
+
+.details-container .firstS-details h1 span {
+  margin-right: 20px;
+  font-size: 0.5em;
+  font-weight: 700;
+}
+
+.details-container .firstS-details .image-container {
+  height: 80%;
+  background: url("../../assets/mancha.svg") no-repeat center;
+  background-size: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-container .firstS-details .image-container img {
+  width: 70%;
+}
+
+.details-container .secondS-details {
+  border: 2px solid var(--gray);
+  width: 50%;
+  background-color: var(--black);
+  margin: 15px 20px;
+  border-radius: 10px;
+}
+
+.details-container .secondS-details img {
+  display: block;
+  margin: 0 auto;
+}

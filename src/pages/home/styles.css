@@ -86,6 +86,7 @@
 .home-container .first-side main .links a {
   color: var(--gray);
   transition: transform 0.4s;
+  margin-bottom: 30px;
 }
 
 .home-container .first-side main .links a:hover {

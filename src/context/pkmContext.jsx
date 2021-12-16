@@ -3,23 +3,24 @@ import { allDex } from '../services/pokeAPI';
 
 export const PkmContext = createContext({
     setGen: () => {},
-    pokemonList: []
+    pokemonList: [],
+    pokemonDetails: {},
+    setPokemonDetails: () => {}
 });
 
 export default function PkmProvider({ children }) {
 
     const [gen, setGen] = useState(-1);
     const [pokemonList, setPokemonList] = useState([]);
+    const [pokemonDetails, setPokemonDetails] = useState({});
 
     useEffect(() => {
         const buscarPKMs = async () => {
-            if (gen >= 0 || gen < 8) {
-                try {
-                    const pkm = await allDex[gen];
-                    setPokemonList(pkm);
-                } catch (e) {
-                    alert("Ops ocoreu um erro!");
-                }
+            try {
+                const pkm = await allDex[gen];
+                setPokemonList(pkm);
+            } catch (e) {
+                alert("Ops ocoreu um erro!");
             }
         }
         buscarPKMs();
@@ -30,6 +31,8 @@ export default function PkmProvider({ children }) {
             value={{
                 setGen,
                 pokemonList,
+                pokemonDetails,
+                setPokemonDetails
             }}
         >
             {children}
