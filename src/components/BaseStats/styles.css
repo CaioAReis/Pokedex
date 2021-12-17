@@ -1,0 +1,42 @@
+.status {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.status > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status > div > section {
+  margin-block: 5px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.status > div > section span {
+  color: var(--gray);
+  font-size: 1.5em;
+}
+
+.status > div > section > div {
+  background-color: var(--dark-blue);
+  width: 70%;
+  height: 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.status > div > section > div > div {
+  background-image: linear-gradient(
+    to right,
+    var(--light-green),
+    var(--light-blue)
+  );
+  height: 13px;
+  border-radius: 20px;
+}

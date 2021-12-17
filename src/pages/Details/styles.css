@@ -4,6 +4,12 @@
   display: flex;
 }
 
+.details-container .details-title {
+  color: var(--gray);
+  font-weight: 700;
+  font-size: 2em;
+}
+
 .details-container .firstS-details {
   display: flex;
   flex-direction: column;
@@ -56,9 +62,42 @@
   background-color: var(--black);
   margin: 15px 20px;
   border-radius: 10px;
+  padding: 20px;
 }
 
 .details-container .secondS-details img {
   display: block;
   margin: 0 auto;
+}
+
+.details-container .secondS-details .base-stats {
+  margin-bottom: 40px;
+}
+
+.details-container .secondS-details .hei-wei-types {
+  display: flex;
+}
+
+.details-container .secondS-details .hei-wei-types .hei-wei {
+  width: 50%;
+}
+
+.details-container .secondS-details .hei-wei-types .hei-wei h2:nth-child(1) {
+  margin-bottom: 25px;
+}
+
+.details-container .secondS-details .hei-wei-types .hei-wei h2 span {
+  margin-left: 40px;
+  background: linear-gradient(to right, var(--light-green), var(--light-blue));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.details-container .secondS-details .hei-wei-types .types {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

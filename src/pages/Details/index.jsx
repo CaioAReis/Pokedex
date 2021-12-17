@@ -4,8 +4,9 @@ import { ArrowLeftCircle } from 'react-feather';
 
 import Logo from '../../assets/logo.svg';
 
-
 import './styles.css';
+import { BaseStats } from '../../components/BaseStats';
+import { Types } from '../../components/Types'
 
 export const PokemonDetails = () => {
 
@@ -35,77 +36,30 @@ export const PokemonDetails = () => {
                 <img src={Logo} alt="Logo" />
 
                 <section className="base-stats">
-                    <h2>Base Stats:</h2>
+                    <h2 className="details-title" >Base Stats:</h2>
 
-                    <section className="status">
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-
-                        <section>
-                            <span>HP:</span>
-
-                            <div>
-                                <div />
-                            </div>
-                        </section>
-                    </section>
+                    <BaseStats pokemonDetails={pokemonDetails}/>
                 </section>
 
                 <section className="hei-wei-types">
 
-                    <div>
-                        <h2>Height: 0.8m</h2>
-                        <h2>Weight: 9Kgs</h2>
+                    <div className="hei-wei">
+                        <h2 className="details-title">
+                            Height: 
+                            <span>
+                                {(pokemonDetails.height) / 10}m
+                            </span>
+                        </h2>
+                        <h2 className="details-title">
+                            Weight: 
+                            <span>
+                                {(pokemonDetails.weight) / 10}Kg
+                            </span>
+                        </h2>
                     </div>
 
-                    <div>
-                        <p>GRASS</p>
-                        <p>POISON</p>
+                    <div className="types">
+                        <Types pokemonTypes={pokemonDetails.types} />
                     </div>
                 </section>
 
