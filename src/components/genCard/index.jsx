@@ -21,11 +21,15 @@ export const GenCard = ({ genNum, genName }) => {
     const gens = { Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar }
 
     return(
-        <Link className="gen-card" to={`/gen/${genNum}`} onClick={() => setGen(genNum)}>
-            <li>
-                <img src={gens[`${genName}`]} alt={genName} />
-                <h2>{genName}</h2>
-            </li>
-        </Link>
+        genName === undefined ? null : (
+            <Link className="gen-card" to="/gen" onClick={() => setGen(genNum)}>
+                <li>
+                    <img 
+                        src={gens[`${genName}`]} 
+                        alt={genName} />
+                    <h2>{genName}</h2>
+                </li>
+            </Link>
+        )
     );
 }

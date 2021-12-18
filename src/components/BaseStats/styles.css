@@ -28,7 +28,7 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .status > div > section > div > div {
@@ -39,4 +39,40 @@
   );
   height: 13px;
   border-radius: 20px;
+}
+
+/* ====================================================================== */
+.status > div > section div.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.status > div > section div.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-image: linear-gradient(var(--light-green), var(--light-blue));
+  color: var(--black);
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 5px 0;
+  z-index: 1;
+  position: absolute;
+  bottom: 150%;
+  left: 35%;
+  margin: 0 auto;
+}
+
+.status > div > section div.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid;
+  border-color: var(--light-blue) transparent transparent transparent;
+}
+
+.status > div > section div.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

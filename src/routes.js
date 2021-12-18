@@ -11,7 +11,7 @@ export const Router = () => {
             <Routes>
                <Route path="/" index element={<Home />} />
                <Route path="/gens" element={<Generations />} />
-               <Route path='/gen/:idGen' element={<PokemonList />} />
+               <Route path='/gen' element={<PokemonList />} />
                <Route path='/pokemon/details' element={<PokemonDetails />} />
             </Routes>
         </BrowserRouter>

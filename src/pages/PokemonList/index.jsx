@@ -49,11 +49,14 @@ export const PokemonList = () => {
 
             <main className="pokemon-list">
                 {search === '' ? 
-                    <PokemonCard pokemonList={pokemonList} /> :
-                    <PokemonCard pokemonList={filteredList} />
+                    <PokemonCard 
+                        pokemonList={pokemonList !== undefined ? pokemonList : null} 
+                    /> :
+                    <PokemonCard 
+                        pokemonList={filteredList !== undefined ? filteredList : null} 
+                    />
                 }
             </main>
-
         </div>
     );
 }

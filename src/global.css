@@ -26,6 +26,12 @@ body {
   height: 100vh;
   width: 100%;
   background-color: var(--dark-blue);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 button {

@@ -11,7 +11,7 @@ export const PokemonCard = ({ pokemonList }) => {
 
     return(
         <ul className="pokemonCard">
-            {pokemonList !== undefined && pokemonList.map(pokemon => (
+            {pokemonList !== null && pokemonList.map(pokemon => (
                 <Link 
                     to="/pokemon/details" 
                     key={pokemon.id} 
@@ -22,6 +22,7 @@ export const PokemonCard = ({ pokemonList }) => {
                             <img 
                                 src={pokemon.sprites.front_default} 
                                 alt={pokemon.name} 
+                                loading="lazy"
                             />
                         </div>
 

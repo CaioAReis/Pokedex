@@ -7,7 +7,6 @@ import { GenCard } from '../../components/GenCard';
 import './styles.css';
 
 export const Generations = () => {
-
     return(
         <div className="gen-container">
             <section>
