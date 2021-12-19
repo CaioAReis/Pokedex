@@ -4,6 +4,10 @@
 
 > Uma pokedex consumindo os dados provindos da API pública: [PokeAPI](https://pokeapi.co).
 
+## Protótipo FIGMA
+
+[Pokedex FIGMA](https://www.figma.com/file/a6x2j4iTq1BuPhTx0pP2ll/PokemonTest?node-id=0%3A1)
+
 ## Pré-requisitos
 
 - Ter o [NodeJS](https://nodejs.org/) instalado.
